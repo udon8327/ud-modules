@@ -150,18 +150,18 @@ let vm = new Vue({
         });
     },
     getData() {
-      udAxios.get('test/400/失敗了')
-        .then(res => {
-          console.log('res: ', res);
-        })
+      udAxios.get("https://script.google.com/macros/s/AKfycbxvo8_MufuGmGvoiRp90SFAq3_It-FKE7qjKPBFVLMqjx_dfgp60ILhuQEoHxuJa_FV/exec").then((res) => {
+        console.log('res: ', res);
+      });
     },
     postData() {
-      udAxios.post('test', {
-        name: "UDON"
+      let data = {
+        name: "Bohan",
+        email: "bohan@example.com",
+      };
+      udAxios.post("https://script.google.com/macros/s/AKfycbxvo8_MufuGmGvoiRp90SFAq3_It-FKE7qjKPBFVLMqjx_dfgp60ILhuQEoHxuJa_FV/exec", data).then((res) => {
+        console.log('res: ', res);
       })
-        .then(res => {
-          console.log('res: ', res);
-        })
     },
     alert() {
       udAlert("警告\n彈窗");
