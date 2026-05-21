@@ -1,0 +1,59 @@
+html,#app
+  height: 100%
+
+body
+  font-family: "Noto Sans TC", "Helvetica Neue", Helvetica, "PingFang TC", "LiHei Pro", "Hiragino Sans GB", "Microsoft JhengHei", "微軟正黑體", Arial ,sans-serif
+  height: 100%
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+  color: #333
+  margin: 0
+  background-color: #fcfcfc
+
+p,span,h1,h2,h3,h4,h5,h6,label
+  -webkit-text-size-adjust: none
+  margin: 0
+
+img
+  max-width: 100%
+  height: auto
+
+a
+  text-decoration: none !important
+
+// scrollbar
+::-webkit-scrollbar-track-piece
+  background-color: rgba(#fbf7ef, 1)
+::-webkit-scrollbar
+  width: 10px
+  height: 10px
+::-webkit-scrollbar-thumb
+  background-color: rgba(#d9d1ca, 1)
+  background-clip: padding-box
+  min-height: 28px
+  border-radius: 50px
+  border: 3px solid rgba(#fbf7ef, 0)
+  cursor: pointer
+::-webkit-scrollbar-thumb:hover
+  background-color: rgba(#d9d1ca, 0.8)
+
+// v-cloak
+[v-cloak]
+  display: none
+
+// animated
+.animated
+  animation-duration: 0.5s !important
+
+// transition
+.fade-enter-active, .fade-leave-active
+  transition: opacity .2s
+.fade-enter, .fade-leave-to
+  opacity: 0
+
+// @font-face
+//   font-family: 'OptimaEL-Text'
+//   src: url('fonts/oel/OptimaEL-Text.eot')
+//   src: url('fonts/oel/OptimaEL-Text.eot?#iefix') format("embedded-opentype"), url('fonts/oel/OptimaEL-Text.svg#OptimaEL-Text') format("svg"), url('fonts/oel/OptimaEL-Text.ttf') format("truetype"), url('fonts/oel/OptimaEL-Text.woff') format("woff"), url('fonts/oel/OptimaEL-Text.woff2') format("woff2")
+//   font-weight: normal
+//   font-style: normal

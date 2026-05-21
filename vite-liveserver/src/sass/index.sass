@@ -1,0 +1,86 @@
+@import '_variables.sass'
+
+.rule-modal
+  .rule-wrapper
+    position: relative
+    .rule-close
+      position: absolute
+      right: 20px
+      top: 10px
+      width: 8%
+      cursor: pointer
+
+.point-area
+  position: relative
+  .point-wrapper
+    position: absolute
+    left: 50%
+    top: 19%
+    transform: translate(-50%, 0%)
+    width: 78%
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    .point
+      flex: 0 0 19.2%
+      position: relative
+      &.point-18
+        flex: 0 0 39.4%
+      p
+        position: absolute
+        left: 50%
+        bottom: 1%
+        transform: translate(-50%, 0%)
+        font-size: 10px
+        line-height: 15px
+        color: #fff
+        white-space: nowrap
+        span
+          font-size: 16px
+          line-height: 16px
+          padding: 0 1px
+  .signin-day, .signin-point, .share-day, .share-point
+    position: absolute
+    left: 28.5%
+    bottom: 13.5%
+    font-size: 18px
+    line-height: 18px
+    color: #333
+  .signin-day
+    left: 28.5%
+    color: #fff
+  .signin-point
+    left: 53.6%
+  .share-day
+    left: 53.8%
+    bottom: 6.6%
+    color: #fff
+  .share-point
+    left: 79.4%
+    bottom: 6.6%
+
+.button-area
+  background: url('../img/bg_03.jpg') no-repeat top center
+  background-size: contain
+  background-color: #eaf5c4
+  padding: 0 7.5%
+  .rule-button
+    padding-top: 48.5%
+    margin-bottom: 30px
+    display: flex
+    justify-content: center
+    img
+      width: 90%
+      cursor: pointer
+  .signin
+    margin-bottom: 12px
+    img
+      margin-bottom: 15px
+      cursor: pointer
+  .mgm-button
+    margin-bottom: 30px
+    display: flex
+    justify-content: center
+    img
+      width: 90%
+      cursor: pointer

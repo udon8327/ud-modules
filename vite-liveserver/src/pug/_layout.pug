@@ -1,0 +1,50 @@
+doctype html
+html(lang='zh-Hant-TW')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name="viewport" content="width=device-width initial-scale=1 shrink-to-fit=no maximum-scale=1 user-scalable=no")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='description' content='理膚寶水 618美力盛典')
+    meta(name='keywords' content='理膚寶水 618美力盛典')
+    meta(name='author' content='理膚寶水 618美力盛典')
+    meta(property="og:image" content="http://static.naver.jp/line_lp/img/ogp.png")
+    meta(property="og:title" content="理膚寶水 618美力盛典")
+    meta(property="og:description" content="理膚寶水 618美力盛典")
+    link(href='img/favicon.ico' rel='shortcut icon')
+    title 理膚寶水 618美力盛典
+    //- Google Fonts
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet")
+    link(href='css/main.css' rel='stylesheet')
+    link(href='css/ud-modules.css' rel='stylesheet')
+    //- link(href='https://ud-modules.udons.site/css/ud-modules.css' rel='stylesheet')
+    //- link(href='css/ud-modules-dev.css' rel='stylesheet')
+    block css
+
+  body
+    noscript Your browser does not support JavaScript!
+    #app(v-cloak)
+      block modal
+      .container
+        .wrapper
+          block content
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.16/vue.common.dev.js")
+    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.16/vue.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js")
+    script(src="https://static.line-scdn.net/liff/edge/versions/2.26.1/sdk.js")
+    script.
+      if(!window.Vue){
+        document.write(`
+          <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.min.js"><\/script>
+          <script src="https://cdn.jsdelivr.net/npm/axios@1.9.0/dist/axios.min.js"><\/script>
+        `);
+      }
+    script(src="js/config.js")
+    script(src="js/ud-modules.js")
+    //- script(src="https://ud-modules.udons.site/js/ud-modules.js")
+    //- script(src="js/ud-modules-dev.js")
+    script(src="js/ud-axios.js")
+    block js

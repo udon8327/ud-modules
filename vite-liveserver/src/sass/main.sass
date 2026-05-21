@@ -1,0 +1,78 @@
+@import '_variables.sass'
+@import '_reset.sass'
+
+// @font-face
+//   font-family: 'DINCondensedBold'
+//   src: url('../fonts/DINCondensedBold.eot')
+//   src: url('../fonts/DINCondensedBold.eot?#iefix') format("embedded-opentype"), url('../fonts/DINCondensedBold.svg#DINCondensedBold') format("svg"), url('../fonts/DINCondensedBold.ttf') format("truetype"), url('../fonts/DINCondensedBold.woff') format("woff"), url('../fonts/DINCondensedBold.woff2') format("woff2")
+//   font-weight: normal
+//   font-style: normal
+
+html,#app
+  height: 100%
+
+body
+  font-family: "Helvetica Neue", Helvetica, "PingFang TC", "LiHei Pro", "Hiragino Sans GB", "Microsoft JhengHei", "微軟正黑體", Arial ,sans-serif
+  height: 100%
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+  color: #333
+  margin: 0
+  background-color: #fafafa
+
+p,span,h1,h2,h3,h4,h5,h6,label,div
+  font-size: 16px
+  font-weight: normal
+  -webkit-text-size-adjust: none
+  margin: 0
+
+img
+  max-width: 100%
+  height: auto
+
+// a
+//   color: #333
+//   text-decoration: none !important
+
+.container
+  max-width: 540px
+  margin: 0 auto
+  // background: url('../img/bg.jpg') repeat top center
+  // background-size: 100%
+  min-height: 100%
+  background-color: #eaf5c4
+  padding: 0 0 20px 0
+  .wrapper
+
+// global class
+.d-none,[v-cloak]
+  display: none
+.d-block
+  display: block
+.d-inline-block
+  display: inline-block
+.d-flex
+  display: flex
+.d-inline-flex
+  display: inline-flex
+.v-hidden
+  visibility: hidden
+
+.hover
+  cursor: pointer
+  transition: all 0.2s ease
+  &:hover
+    opacity: 0.75
+
+.animated
+  animation-duration: 0.5s !important
+
+.loading-enter-active, .loading-leave-active
+  transition: opacity .2s
+.loading-enter, .loading-leave-to
+  opacity: 0
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .2s
+.fade-enter, .fade-leave-to
+  opacity: 0

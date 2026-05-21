@@ -1,0 +1,103 @@
+.rule-modal .rule-wrapper {
+  position: relative;
+}
+.rule-modal .rule-wrapper .rule-close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 8%;
+  cursor: pointer;
+}
+
+.point-area {
+  position: relative;
+}
+.point-area .point-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 19%;
+  transform: translate(-50%, 0%);
+  width: 78%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.point-area .point-wrapper .point {
+  flex: 0 0 19.2%;
+  position: relative;
+}
+.point-area .point-wrapper .point.point-18 {
+  flex: 0 0 39.4%;
+}
+.point-area .point-wrapper .point p {
+  position: absolute;
+  left: 50%;
+  bottom: 1%;
+  transform: translate(-50%, 0%);
+  font-size: 10px;
+  line-height: 15px;
+  color: #fff;
+  white-space: nowrap;
+}
+.point-area .point-wrapper .point p span {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 0 1px;
+}
+.point-area .signin-day, .point-area .signin-point, .point-area .share-day, .point-area .share-point {
+  position: absolute;
+  left: 28.5%;
+  bottom: 13.5%;
+  font-size: 18px;
+  line-height: 18px;
+  color: #333;
+}
+.point-area .signin-day {
+  left: 28.5%;
+  color: #fff;
+}
+.point-area .signin-point {
+  left: 53.6%;
+}
+.point-area .share-day {
+  left: 53.8%;
+  bottom: 6.6%;
+  color: #fff;
+}
+.point-area .share-point {
+  left: 79.4%;
+  bottom: 6.6%;
+}
+
+.button-area {
+  background: url("../img/bg_03.jpg") no-repeat top center;
+  background-size: contain;
+  background-color: #eaf5c4;
+  padding: 0 7.5%;
+}
+.button-area .rule-button {
+  padding-top: 48.5%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.button-area .rule-button img {
+  width: 90%;
+  cursor: pointer;
+}
+.button-area .signin {
+  margin-bottom: 12px;
+}
+.button-area .signin img {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.button-area .mgm-button {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.button-area .mgm-button img {
+  width: 90%;
+  cursor: pointer;
+}

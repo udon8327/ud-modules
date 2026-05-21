@@ -1,0 +1,39 @@
+extends _layout.pug
+
+block css
+  link(href='css/index.css' rel='stylesheet')
+
+block modal
+  ud-modal.rule-modal(v-model="isRuleModalShow" no-bg full-screen)
+    .rule-wrapper
+      img.rule-close(src="img/rule_close.png", alt="" @click="isRuleModalShow = false")
+      img(src="img/rule.png", alt="")
+
+block content
+  .title-area
+    img(src="img/bg_01.jpg", alt="")
+  .point-area
+    .point-wrapper
+      .point(v-for="item in pointList" :key="item.id" :class="`point-${item.id}`")
+        img(v-if="item.id === 18" :src="`img/point_last${item.isComplete ? '_v' : ''}.png`")
+        img(v-else-if="item.id === 5 || item.id === 9 || item.id === 14" :src="`img/point_bonus${item.isComplete ? '_v' : ''}.png`")
+        img(v-else :src="`img/point${item.isComplete ? '_v' : ''}.png`")
+        p 第#[span {{ item.id }}]天
+      .point.point-19
+    p.signin-day {{ signinDay }}
+    p.signin-point {{ signinPoint }}
+    p.share-day {{ shareDay }}
+    p.share-point {{ sharePoint }}
+    img(src="img/bg_02.jpg")
+  .button-area
+    .rule-button
+      img(src="img/button_01.png", alt="" @click="isRuleModalShow = true")
+    .signin
+      .bom(v-for="item in bomList" :key="item.id" @click="toUrl(item.link)")
+        img(:src="item.url")
+    .mgm-button
+      img(src="img/button_02.png", alt="")
+    //- img(src="img/bg_03.jpg", alt="")
+
+block js
+  script(src="js/index.js")

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1 shrink-to-fit=no maximum-scale=1 user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="理膚寶水 618美力盛典">
+    <meta name="keywords" content="理膚寶水 618美力盛典">
+    <meta name="author" content="理膚寶水 618美力盛典">
+    <meta property="og:image" content="http://static.naver.jp/line_lp/img/ogp.png">
+    <meta property="og:title" content="理膚寶水 618美力盛典">
+    <meta property="og:description" content="理膚寶水 618美力盛典">
+    <link href="img/favicon.ico" rel="shortcut icon">
+    <title>理膚寶水 618美力盛典</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&amp;family=Noto+Sans+TC:wght@100..900&amp;display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/ud-modules.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+  </head>
+  <body>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <div id="app" v-cloak>
+      <ud-modal class="rule-modal" v-model="isRuleModalShow" no-bg full-screen>
+        <div class="rule-wrapper"><img class="rule-close" src="img/rule_close.png" alt="" @click="isRuleModalShow = false"><img src="img/rule.png" alt=""></div>
+      </ud-modal>
+      <div class="container">
+        <div class="wrapper">
+          <div class="title-area"><img src="img/bg_01.jpg" alt=""></div>
+          <div class="point-area">
+            <div class="point-wrapper">
+              <div class="point" v-for="item in pointList" :key="item.id" :class="`point-${item.id}`"><img v-if="item.id === 18" :src="`img/point_last${item.isComplete ? '_v' : ''}.png`"><img v-else-if="item.id === 5 || item.id === 9 || item.id === 14" :src="`img/point_bonus${item.isComplete ? '_v' : ''}.png`"><img v-else :src="`img/point${item.isComplete ? '_v' : ''}.png`">
+                <p>第<span>{{ item.id }}</span>天</p>
+              </div>
+              <div class="point point-19"></div>
+            </div>
+            <p class="signin-day">{{ signinDay }}</p>
+            <p class="signin-point">{{ signinPoint }}</p>
+            <p class="share-day">{{ shareDay }}</p>
+            <p class="share-point">{{ sharePoint }}</p><img src="img/bg_02.jpg">
+          </div>
+          <div class="button-area">
+            <div class="rule-button"><img src="img/button_01.png" alt="" @click="isRuleModalShow = true"></div>
+            <div class="signin">
+              <div class="bom" v-for="item in bomList" :key="item.id" @click="toUrl(item.link)"><img :src="item.url"></div>
+            </div>
+            <div class="mgm-button"><img src="img/button_02.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.16/vue.common.dev.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.26.1/sdk.js"></script>
+    <script>
+      if(!window.Vue){
+        document.write(`
+          <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.min.js"><\/script>
+          <script src="https://cdn.jsdelivr.net/npm/axios@1.9.0/dist/axios.min.js"><\/script>
+        `);
+      }
+    </script>
+    <script src="js/config.js"></script>
+    <script src="js/ud-modules.js"></script>
+    <script src="js/ud-axios.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
