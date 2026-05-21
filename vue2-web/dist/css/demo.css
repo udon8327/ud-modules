@@ -1,67 +1,60 @@
 .liff-area {
   padding-top: 15px;
-  margin-bottom: 15px; }
-  .liff-area .liff-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-bottom: 10px; }
-    .liff-area .liff-wrapper .ud-image {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 15%;
-      flex: 0 0 15%;
-      border-radius: 50%;
-      overflow: hidden; }
-    .liff-area .liff-wrapper .profile-wrapper {
-      margin-left: 10px; }
-      .liff-area .liff-wrapper .profile-wrapper h6 {
-        font-family: "DINCondensedBold", "LXGW WenKai TC"; }
-      .liff-area .liff-wrapper .profile-wrapper p {
-        color: #999;
-        font-size: 14px; }
+  margin-bottom: 15px;
+}
+.liff-area .liff-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.liff-area .liff-wrapper .ud-image {
+  flex: 0 0 15%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.liff-area .liff-wrapper .profile-wrapper {
+  margin-left: 10px;
+}
+.liff-area .liff-wrapper .profile-wrapper h6 {
+  font-family: "DINCondensedBold", "LXGW WenKai TC";
+}
+.liff-area .liff-wrapper .profile-wrapper p {
+  color: #999;
+  font-size: 14px;
+}
 
 .button-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 10px;
-  gap: 10px; }
-  .button-wrapper .ud-button {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 0px;
-    flex: 1 1 0; }
+  gap: 10px;
+}
+.button-wrapper .ud-button {
+  flex: 1 1 0;
+}
 
 .form-area {
-  margin-bottom: 15px; }
-  .form-area .mx-datepicker {
-    width: 100%; }
-    .form-area .mx-datepicker .mx-input {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      min-height: 40px;
-      color: #000;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      -webkit-box-shadow: none;
-      box-shadow: none; }
-      .form-area .mx-datepicker .mx-input::-webkit-input-placeholder {
-        color: #aaa; }
-      .form-area .mx-datepicker .mx-input:-ms-input-placeholder {
-        color: #aaa; }
-      .form-area .mx-datepicker .mx-input::-ms-input-placeholder {
-        color: #aaa; }
-      .form-area .mx-datepicker .mx-input::placeholder {
-        color: #aaa; }
-      .form-area .mx-datepicker .mx-input:focus {
-        outline: 0;
-        border: 1px solid #000; }
-      .form-area .mx-datepicker .mx-input:disabled {
-        background-color: #efefef;
-        cursor: not-allowed; }
+  margin-bottom: 15px;
+}
+.form-area .mx-datepicker {
+  width: 100%;
+}
+.form-area .mx-datepicker .mx-input {
+  appearance: none;
+  min-height: 40px;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: none;
+}
+.form-area .mx-datepicker .mx-input::placeholder {
+  color: #aaa;
+}
+.form-area .mx-datepicker .mx-input:focus {
+  outline: 0;
+  border: 1px solid #000;
+}
+.form-area .mx-datepicker .mx-input:disabled {
+  background-color: #efefef;
+  cursor: not-allowed;
+}
