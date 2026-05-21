@@ -123,7 +123,13 @@
   cursor: pointer;
   font-size: 14px;
 }
+.ud-date-picker input::-webkit-input-placeholder {
+  color: #868686;
+}
 .ud-date-picker input::-moz-placeholder {
+  color: #868686;
+}
+.ud-date-picker input::-ms-input-placeholder {
   color: #868686;
 }
 .ud-date-picker input::placeholder {
@@ -229,7 +235,8 @@
 }
 .ud-carousel .button-prev, .ud-carousel .button-next {
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   transition: opacity 0.3s;
 }
 .ud-carousel .button-prev:hover, .ud-carousel .button-next:hover {
@@ -264,14 +271,18 @@
 }
 .ud-carousel .carousel-prev-enter-active, .ud-carousel .carousel-prev-leave-active,
 .ud-carousel .carousel-next-enter-active, .ud-carousel .carousel-next-leave-active {
+  transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   will-change: transform;
 }
 .ud-carousel .carousel-next-enter, .ud-carousel .carousel-prev-leave-to {
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 .ud-carousel .carousel-next-leave-to, .ud-carousel .carousel-prev-enter {
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .ud-youtube .video-wrapper {

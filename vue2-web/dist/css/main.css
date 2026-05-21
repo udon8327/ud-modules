@@ -373,7 +373,8 @@ img {
 }
 
 .animated {
-  animation-duration: 0.5s !important;
+  -webkit-animation-duration: 0.5s !important;
+          animation-duration: 0.5s !important;
 }
 
 .loading-enter-active, .loading-leave-active {

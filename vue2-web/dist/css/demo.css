@@ -49,7 +49,13 @@
   border-radius: 4px;
   box-shadow: none;
 }
+.form-area .mx-datepicker .mx-input::-webkit-input-placeholder {
+  color: #aaa;
+}
 .form-area .mx-datepicker .mx-input::-moz-placeholder {
+  color: #aaa;
+}
+.form-area .mx-datepicker .mx-input::-ms-input-placeholder {
   color: #aaa;
 }
 .form-area .mx-datepicker .mx-input::placeholder {

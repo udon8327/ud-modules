@@ -44,7 +44,8 @@ html, #app {
   position: absolute;
   left: -32px;
   top: 50%;
-  transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,14 +63,27 @@ html, #app {
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  animation: spin 0.5s linear infinite;
+  -webkit-animation: spin 0.5s linear infinite;
+          animation: spin 0.5s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .ud-button button:hover, .ud-button button:focus {
@@ -117,7 +131,13 @@ html, #app {
 .ud-input input.is-center {
   text-align: center;
 }
+.ud-input input::-webkit-input-placeholder {
+  color: #aaa;
+}
 .ud-input input::-moz-placeholder {
+  color: #aaa;
+}
+.ud-input input::-ms-input-placeholder {
   color: #aaa;
 }
 .ud-input input::placeholder {
@@ -152,7 +172,13 @@ html, #app {
 .ud-textarea textarea.is-no-resize {
   resize: none;
 }
+.ud-textarea textarea::-webkit-input-placeholder {
+  color: #aaa;
+}
 .ud-textarea textarea::-moz-placeholder {
+  color: #aaa;
+}
+.ud-textarea textarea::-ms-input-placeholder {
   color: #aaa;
 }
 .ud-textarea textarea::placeholder {
@@ -228,7 +254,8 @@ html, #app {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .ud-checkbox.is-flex {
@@ -285,7 +312,8 @@ html, #app {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .ud-select {
@@ -465,7 +493,8 @@ html, #app {
   position: absolute;
   left: -10px;
   top: 64%;
-  transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
 }
 .ud-form-item.is-flex .ud-form-item-right {
   flex: 1 1 0;
@@ -504,16 +533,20 @@ html, #app {
   padding: 3px;
 }
 .ud-arrow.right {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .ud-arrow.left {
-  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 .ud-arrow.up {
-  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 .ud-arrow.down {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .ud-collapse {
@@ -588,10 +621,12 @@ html, #app {
   background-color: #fff;
 }
 .ud-alert .ud-modal-wrapper .ud-modal-close .icon-close:before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .ud-alert .ud-modal-wrapper .ud-modal-close .icon-close:after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .ud-alert .ud-modal-wrapper .ud-modal-header {
   flex: 0 0 auto;
@@ -677,10 +712,12 @@ html, #app {
   background-color: #fff;
 }
 .ud-modal .ud-modal-wrapper .ud-modal-close .icon-close:before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .ud-modal .ud-modal-wrapper .ud-modal-close .icon-close:after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .ud-modal .ud-modal-wrapper .ud-modal-header {
   flex: 0 0 auto;
@@ -755,14 +792,17 @@ html, #app {
   border-radius: 50%;
   width: 32px;
   height: 32px;
-  animation: spin 0.5s linear infinite;
+  -webkit-animation: spin 0.5s linear infinite;
+          animation: spin 0.5s linear infinite;
 }
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .ud-loading .ud-modal-wrapper .ud-modal-content .ud-modal-header .icon-font {
@@ -772,14 +812,17 @@ html, #app {
 .ud-loading .ud-modal-wrapper .ud-modal-content .ud-modal-header .icon-img {
   max-width: 32px;
   margin-bottom: 5px;
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
 }
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .ud-loading .ud-modal-wrapper .ud-modal-content .ud-modal-body p {
