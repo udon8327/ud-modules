@@ -40,12 +40,17 @@
   width: 100%;
 }
 .form-area .mx-datepicker .mx-input {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   min-height: 40px;
   color: #000;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: none;
+}
+.form-area .mx-datepicker .mx-input::-moz-placeholder {
+  color: #aaa;
 }
 .form-area .mx-datepicker .mx-input::placeholder {
   color: #aaa;

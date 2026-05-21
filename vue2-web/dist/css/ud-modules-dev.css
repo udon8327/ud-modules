@@ -108,7 +108,9 @@
   display: none;
 }
 .ud-date-picker input {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-radius: 0px;
   border: 1px solid #f3f5f6;
   font-size: 14px;
@@ -120,6 +122,9 @@
   transition: all 0.2s ease;
   cursor: pointer;
   font-size: 14px;
+}
+.ud-date-picker input::-moz-placeholder {
+  color: #868686;
 }
 .ud-date-picker input::placeholder {
   color: #868686;

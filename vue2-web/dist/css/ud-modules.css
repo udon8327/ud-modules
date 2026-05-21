@@ -23,7 +23,9 @@ html, #app {
   max-width: 100%;
   cursor: pointer;
   box-shadow: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   text-align: center;
   outline: none !important;
   transition: all 0.2s ease;
@@ -99,7 +101,9 @@ html, #app {
 }
 
 .ud-input input {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 100%;
   padding: 5px 10px;
   min-height: 40px;
@@ -112,6 +116,9 @@ html, #app {
 }
 .ud-input input.is-center {
   text-align: center;
+}
+.ud-input input::-moz-placeholder {
+  color: #aaa;
 }
 .ud-input input::placeholder {
   color: #aaa;
@@ -129,7 +136,9 @@ html, #app {
   position: relative;
 }
 .ud-textarea textarea {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 100%;
   padding: 5px 10px;
   min-height: 40px;
@@ -142,6 +151,9 @@ html, #app {
 }
 .ud-textarea textarea.is-no-resize {
   resize: none;
+}
+.ud-textarea textarea::-moz-placeholder {
+  color: #aaa;
 }
 .ud-textarea textarea::placeholder {
   color: #aaa;
@@ -244,10 +256,12 @@ html, #app {
 .ud-checkbox label input:checked + .checkbox-decorator:before {
   background-color: #22273b;
   border-radius: 2px;
-  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M8.76,56.2c-6.38-6.34,3.26-16,9.64-9.69L38,65.88,80.56,23.29c6.38-6.38,16.07,3.32,9.69,9.69L42.84,80.37a6.83,6.83,0,0,1-9.65,0Z"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M8.76,56.2c-6.38-6.34,3.26-16,9.64-9.69L38,65.88,80.56,23.29c6.38-6.38,16.07,3.32,9.69,9.69L42.84,80.37a6.83,6.83,0,0,1-9.65,0Z"/></svg>');
+          mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M8.76,56.2c-6.38-6.34,3.26-16,9.64-9.69L38,65.88,80.56,23.29c6.38-6.38,16.07,3.32,9.69,9.69L42.84,80.37a6.83,6.83,0,0,1-9.65,0Z"/></svg>');
 }
 .ud-checkbox label input:checked + .checkbox-decorator.is-solid:before {
-  mask-image: inherit;
+  -webkit-mask-image: inherit;
+          mask-image: inherit;
 }
 .ud-checkbox label .checkbox-decorator {
   margin-right: 6px;
@@ -293,7 +307,9 @@ html, #app {
   pointer-events: none;
 }
 .ud-select select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-radius: 4px;
   border: 1px solid #cecece;
   background-color: #fff;
@@ -321,7 +337,8 @@ html, #app {
   color: #a8a8a8;
 }
 .ud-select select.center {
-  text-align-last: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 
 .ud-select-date {

@@ -6,6 +6,8 @@ import ts from 'typescript'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import postcss from 'postcss'
+import autoprefixer from 'autoprefixer'
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url))
 
@@ -69,14 +71,15 @@ function compilePug(file) {
   }
 }
 
-function compileSass(file) {
+async function compileSass(file) {
   if (path.basename(file).startsWith('_')) return
   const outDir = resolve(config.sass.outDir)
   ensureDir(outDir)
   try {
     const result = sass.compile(file, { style: 'expanded' })
     const outFile = path.join(outDir, path.basename(file).replace(/\.sass$/, '.css'))
-    fs.writeFileSync(outFile, result.css)
+    const prefixed = await postcss([autoprefixer]).process(result.css, { from: undefined })
+    fs.writeFileSync(outFile, prefixed.css)
     console.log(`[sass] ${path.relative(ROOT, file)} → ${path.relative(ROOT, outFile)}`)
   } catch (e) {
     console.error(`[sass] ERROR in ${path.relative(ROOT, file)}:`, e.message)
@@ -113,12 +116,14 @@ function compileAllPug() {
     .forEach(f => compilePug(path.join(srcDir, f)))
 }
 
-function compileAllSass() {
+async function compileAllSass() {
   const srcDir = resolve(config.sass.srcDir)
   if (!fs.existsSync(srcDir)) return
-  fs.readdirSync(srcDir)
-    .filter(f => f.endsWith('.sass') && !f.startsWith('_'))
-    .forEach(f => compileSass(path.join(srcDir, f)))
+  await Promise.all(
+    fs.readdirSync(srcDir)
+      .filter(f => f.endsWith('.sass') && !f.startsWith('_'))
+      .map(f => compileSass(path.join(srcDir, f)))
+  )
 }
 
 function compileAllTs() {
@@ -143,13 +148,13 @@ function pugSassTsWatcher() {
         resolve(config.ts.srcDir),
       ])
 
-      server.watcher.on('all', (event, file) => {
+      server.watcher.on('all', async (event, file) => {
         if (file.endsWith('.pug')) {
           if (path.basename(file).startsWith('_')) compileAllPug()
           else compilePug(file)
         } else if (file.endsWith('.sass')) {
-          if (path.basename(file).startsWith('_')) compileAllSass()
-          else compileSass(file)
+          if (path.basename(file).startsWith('_')) await compileAllSass()
+          else await compileSass(file)
         } else if (file.endsWith('.ts')) {
           if (path.basename(file).startsWith('_')) compileAllTs()
           else compileTs(file)
